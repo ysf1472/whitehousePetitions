@@ -14,6 +14,8 @@
 		FD4024FD29005AFE0087B03F /* project7_100days.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD4024FB29005AFE0087B03F /* project7_100days.xcdatamodeld */; };
 		FD4024FF29005AFF0087B03F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD4024FE29005AFF0087B03F /* Assets.xcassets */; };
 		FD40250229005AFF0087B03F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD40250029005AFF0087B03F /* LaunchScreen.storyboard */; };
+		FD40250A290078630087B03F /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD402509290078630087B03F /* Petitions.swift */; };
+		FD40250C290079470087B03F /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD40250B290079470087B03F /* Petition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FD4024FE29005AFF0087B03F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD40250129005AFF0087B03F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD40250329005AFF0087B03F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD402509290078630087B03F /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		FD40250B290079470087B03F /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				FD40250029005AFF0087B03F /* LaunchScreen.storyboard */,
 				FD40250329005AFF0087B03F /* Info.plist */,
 				FD4024FB29005AFE0087B03F /* project7_100days.xcdatamodeld */,
+				FD402509290078630087B03F /* Petitions.swift */,
+				FD40250B290079470087B03F /* Petition.swift */,
 			);
 			path = "project7-100days";
 			sourceTree = "<group>";
@@ -145,6 +151,8 @@
 				FD4024F729005AFE0087B03F /* ViewController.swift in Sources */,
 				FD4024F329005AFE0087B03F /* AppDelegate.swift in Sources */,
 				FD4024F529005AFE0087B03F /* SceneDelegate.swift in Sources */,
+				FD40250A290078630087B03F /* Petitions.swift in Sources */,
+				FD40250C290079470087B03F /* Petition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
