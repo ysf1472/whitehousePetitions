@@ -7,20 +7,38 @@
 
 import UIKit
 
+
 class ViewController: UITableViewController {
 var petitions = [Petition]()
-let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        let urlString : String
+        
+            if navigationController?.tabBarItem.tag==0{
+                urlString="https://www.hackingwithswift.com/samples/petitions-1.json"
+            }else{
+                urlString="https://www.hackingwithswift.com/samples/petitions-2.json"
+            }
+           
+        
         DispatchQueue.main.async { [self] in
-            if let url = URL(string: self.urlString){
+            if let url = URL(string: urlString){
                 if let data = try? Data(contentsOf: url){
                     parse(json: data)
+                    return
                 }
             }
+                showError()
+                
+            
         }
     }
-
+    func showError(){
+        let ac = UIAlertController(title: "Loading Error", message: "There was a problem loading the feed, please check your connection and try again", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "Okay", style: .default))
+        present(ac,animated: true)
+    }
     func parse(json: Data){
         let decoder = JSONDecoder()
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json){
@@ -49,6 +67,11 @@ let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         
         cell.contentConfiguration = content
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.detailItem = petitions[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 
 }
